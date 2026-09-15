@@ -77,11 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "VetLab — Estudo para medicina veterinária" },
+      {
+        name: "description",
+        content:
+          "Flashcards, calculadora de dose e casos clínicos para estudantes de medicina veterinária.",
+      },
+      { property: "og:title", content: "VetLab" },
+      {
+        property: "og:description",
+        content: "Revisão de anatomia, farmacologia e clínica veterinária.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
