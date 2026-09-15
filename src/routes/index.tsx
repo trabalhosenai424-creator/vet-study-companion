@@ -37,7 +37,7 @@ function Flashcards() {
   const [revelado, setRevelado] = useState(false);
   const [acertos, setAcertos] = useState(0);
   const [erros, setErros] = useState(0);
-  const card = flashcards[indice];
+  const card = flashcards[indice]!;
 
   function responder(acertou: boolean) {
     if (acertou) setAcertos((n) => n + 1);
@@ -100,9 +100,9 @@ function Flashcards() {
 }
 
 function Calculadora() {
-  const [nome, setNome] = useState(farmacos[0].nome);
+  const [nome, setNome] = useState(farmacos[0]!.nome);
   const [peso, setPeso] = useState("7,5");
-  const farmaco = farmacos.find((f) => f.nome === nome) ?? farmacos[0];
+  const farmaco = farmacos.find((f) => f.nome === nome) ?? farmacos[0]!;
 
   const resultado = useMemo(() => {
     const kg = Number(peso.replace(",", "."));
